@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Game Store</title>
+</head>
+
+<body class="bg-info">
+    <div class="container">
+        <div class="font-weight-bold text-center">
+            <img src="/img/logo.jpg" alt="logo">
+            <h1>Game Store - Último Cadastro</h1>
+        </div>
+
+        <h2 th:text="${cliente.nome}">Nome:</h2>
+        <h2 th:text="${cliente.cpf}">CPF:</h2>
+        <h2 th:text="${cliente.email}">E-mail:</h2>
+        <h2 th:text="${cliente.telefone}">Telefone:</h2>
+        <h2 th:text="${cliente.endereco}">Endereço:</h2>
+        <a class="btn btn-dark" href="/index-cliente">VOLTAR</a>
+    </div>
+
+    <script src="/js/bootstrap.mim.js"></script>
+    <script src="/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+</body>
+
+</html>

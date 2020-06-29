@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Cadastro Game</title>
+</head>
+
+<body class="bg-info">
+    <div class="container">
+        <div class="font-weight-bold text-center">
+            <img src="/img/logo.jpg" alt="logo">
+            <h1>Game Store - Cadastro Game</h1>
+        </div>
+
+        <form action="/cadastrar-game" method="POST">
+
+            <div class="form-group">
+                <b><label for="jogo">Nome Jogo</label></b>
+                <input class="form-control" type="text" name="jogo" id="jogo" th:value="${game.jogo}"
+                    placeholder="ex: Forza Horizon 4">
+            </div>
+
+            <div class="form-group">
+                <b><label for="lancamento">Ano Lancamento</label></b>
+                <input class="form-control" type="text" name="lancamento" id="lancamento" th:value="${game.lancamento}"
+                    placeholder="ex: 2019">
+            </div>
+
+            <div class="form-group">
+                <b><label for="categoria">Categoria</label></b>
+                <input class="form-control" type="text" name="categoria" id="categoria" th:value="${game.categoria}"
+                    placeholder="ex: Corrida">
+            </div>
+
+            <div class="form-group">
+                <b><label for="desenvolvedora">Desenvolvedora</label></b>
+                <input class="form-control" type="text" name="desenvolvedora" id="desenvolvedora"
+                    th:value="${game.desenvolvedora}" placeholder="ex: PlayGround Games">
+            </div>
+
+            <div class="form-group">
+                <b><label for="publicadora">Publicadora</label></b>
+                <input class="form-control" type="text" name="publicadora" id="publicadora"
+                    th:value="${game.publicadora}" placeholder="ex: Microsoft Studios">
+            </div>
+
+            <input type="hidden" name="id" th:value="${game.id}">
+
+            <input class="btn btn-dark m-1" type="submit" value="CADASTRAR" id="cadastrar">
+        </form>
+
+        <a class="btn btn-dark m-1" href="/index-game">VOLTAR</a>
+        <a href=""></a>
+    </div>
+
+    <script src="/js/bootstrap.mim.js"></script>
+    <script src="/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+</body>
+
+</html>

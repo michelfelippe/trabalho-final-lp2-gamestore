@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Cadastro Cliente</title>
+</head>
+
+<body class="bg-info">
+    <div class="container">
+        <div class="font-weight-bold text-center">
+            <img src="/img/logo.jpg" alt="logo">
+            <h1>Game Store - Cadastro Cliente</h1>
+        </div>
+
+        <form action="/cadastrar-cliente" method="POST">
+
+            <div class="form-group">
+                <b><label for="nome">Nome Completo</label></b>
+                <input class="form-control" type="text" name="nome" id="nome" th:value="${cliente.nome}"
+                    placeholder="ex: José da Silva">
+            </div>
+
+            <div class="form-group">
+                <b><label for="cpf">CPF</label></b>
+                <input class="form-control" type="text" name="cpf" id="cpf" th:value="${cliente.cpf}"
+                    placeholder="ex: 000.000.000-00">
+            </div>
+
+            <div class="form-group">
+                <b><label for="email">E-mail</label></b>
+                <input class="form-control" type="text" name="email" id="email" th:value="${cliente.email}"
+                    placeholder="ex: exemplo@exemplo.com">
+            </div>
+
+            <div class="form-group">
+                <b><label for="telefone">Telefone</label></b>
+                <input class="form-control" type="text" name="telefone" id="telefone" th:value="${cliente.telefone}"
+                    placeholder="ex: 4899999999">
+            </div>
+
+            <div class="form-group">
+                <b><label for="endereco">Endereço</label></b>
+                <input class="form-control" type="text" name="endereco" id="endereco" th:value="${cliente.endereco}"
+                    placeholder="ex: Rua X, 222">
+            </div>
+
+            <input type="hidden" name="id" th:value="${cliente.id}">
+
+            <input class="btn btn-dark m-1" type="submit" value="CADASTRAR" id="cadastrar">
+        </form>
+
+        <a class="btn btn-dark m-1" href="/index-cliente">VOLTAR</a>
+    </div>
+
+    <script src="/js/bootstrap.mim.js"></script>
+    <script src="/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+</body>
+
+</html>

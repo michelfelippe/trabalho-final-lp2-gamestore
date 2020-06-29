@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Cadastro Cliente</title>
+</head>
+
+<body class="bg-info">
+    <div class="container">
+        <div class="font-weight-bold text-center">
+            <img src="/img/logo.jpg" alt="logo">
+            <h1>Game Store - Cadastro Cliente</h1>
+        </div>
+
+        <div th:if="${listaCliente.size() > 0}">
+            <div class="row m-1" th:each="cliente : ${listaCliente}">
+                <div class="col-6">
+                    <a class="text-dark" th:href="@{/mostrar-cliente/{id}(id=${cliente.id})}"
+                        th:text="${cliente.nome}"></a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-dark" th:href="@{/editar-cliente/{id}(id=${cliente.id})}">ALTERAR</a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-dark" th:href="@{/deletar-cliente/{id}(id=${cliente.id})}">APAGAR</a>
+                </div>
+            </div>
+        </div>
+
+        <a class="btn btn-dark" href="/cadastrar-cliente">CADASTRE NOVO CLIENTE</a>
+        <a class="btn btn-dark" href="/">MENU PRINCIPAL</a>
+    </div>
+
+    <script src="/js/bootstrap.mim.js"></script>
+    <script src="/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Cadastro Game</title>
+</head>
+
+<body class="bg-info">
+    <div class="container">
+        <div class="text-center">
+            <img src="/img/logo.jpg" alt="logo">
+            <h1>Game Store - Cadastro Game</h1>
+        </div>
+
+        <div th:if="${listaGame.size() > 0}">
+            <div class="row m-1" th:each="game : ${listaGame}">
+                <div class="col-6">
+                    <a class="text-dark" th:href="@{/mostrar-game/{id}(id=${game.id})}" th:text="${game.jogo}"></a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-dark" th:href="@{/editar-game/{id}(id=${game.id})}">ALTERAR</a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-dark" th:href="@{/deletar-game/{id}(id=${game.id})}">APAGAR</a>
+                </div>
+            </div>
+        </div>
+
+        <a class="btn btn-dark" href="/cadastrar-game">CADASTRAR NOVO JOGO</a>
+        <a class="btn btn-dark" href="/">MENU PRINCIPAL</a>
+    </div>
+
+    <script src="/js/bootstrap.mim.js"></script>
+    <script src="/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+</body>
+
+</html>

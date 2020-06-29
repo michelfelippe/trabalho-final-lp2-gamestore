@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/gamestore.css">
+    <title>Game Store - Contatos</title>
+</head>
+
+<body class="bg-info text-center">
+    <div class="container">
+        <div class="font-weight-bold text-center">
+            <img src="/img/logo.jpg" alt="logo">
+            <h1>Game Store - Contatos</h1>
+        </div>
+
+        <div class="text-center">
+            <img src="https://cdn.icon-icons.com/icons2/1674/PNG/512/phonecall_110970.png" alt="telefone" height="100"
+                width="100" onclick="telefone()">
+            <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/email-2075069-1751130.png" alt="e-mail"
+                height="100" width="100" onclick="email()">
+            <img src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-1.png" alt="whatsapp"
+                height="100" width="100" onclick="whatsapp()">
+            <img src="https://pngimg.com/uploads/telegram/telegram_PNG36.png" alt="telegram" height="100" width="100"
+                onclick="telegram()">
+            <div id="mensagem" class="text-center"></div>
+        </div>
+
+        <div class="text-center">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.066565082758!2d-48.608443871204535!3d-27.591465819215312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952749d7d6bcf42d%3A0xf80dcfbad8c90832!2sR.%20Um%2C%20100%20-%20Campinas%2C%20S%C3%A3o%20Jos%C3%A9%20-%20SC!5e0!3m2!1spt-BR!2sbr!4v1587683269316!5m2!1spt-BR!2sbr"
+                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+        </div>
+    </div>
+
+    <div>
+        <a class="btn btn-dark" href="/">MENU PRINCIPAL</a>
+    </div>
+
+    <script>
+        var mensagem = document.getElementById('mensagem');
+
+        function telefone() {
+            mensagem.innerHTML = `(48)99999-9999`
+        }
+
+        function email() {
+            mensagem.innerHTML = `contato@gamestore.com.br`
+        }
+
+        function whatsapp() {
+            mensagem.innerHTML = `(48)88888-8888`
+        }
+
+        function telegram() {
+            mensagem.innerHTML = `contato.gamestore`
+        }
+    </script>
+
+    <script src="/js/bootstrap.mim.js"></script>
+    <script src="/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+</body>
+
+</html>
